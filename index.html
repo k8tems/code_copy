@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="code"></p>
+<button onclick="copyCode()">コピー</button>
+
+<script>
+const params = new URLSearchParams(document.location.search);
+document.getElementById("code").innerHTML = params.get("code");
+
+function copyCode() {
+  navigator.clipboard.writeText(document.getElementById("code").innerHTML);
+}
+</script>
+
+</body>
+</html>
